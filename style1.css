@@ -1,0 +1,79 @@
+.body {
+    background-color: rgb(143, 58, 255);
+}
+
+.gridWeb {
+    display: grid;
+    grid-template: auto auto auto auto auto auto auto auto / auto auto auto;
+    grid-template-areas: "header header header"
+    "navbar navbar navbar"
+    "mainfoto mainfoto mainfoto"
+    "centeropt centeropt centeropt"
+    "izqfoto cenfoto derfoto"
+    "prefooter prefooter prefooter"
+    "webmapizq webmapcen webmapder"
+    "footer footer footer";
+    align-content: center;
+}
+
+.header {grid-area: header; 
+    background-color: #1e01d8dc;
+    border: 1px solid;
+}
+
+.navbar {grid-area: navbar;
+    background-color: #1e01d8dc;
+    border: 1px solid;
+}
+.mainfoto {grid-area: mainfoto;
+    border: 1px solid lightcoral;
+    width: auto;
+}
+
+img {
+    border-radius: 10px;
+    width: 100%;
+    max-width: auto;
+}
+
+.centeropt {grid-area: centeropt;
+    border: 1px solid green;
+    background-color: rgb(17, 0, 255);
+}
+.izqfoto {grid-area: izqfoto;
+    border: 1px solid black;
+}
+.cenfoto {grid-area: cenfoto;
+    border: 1px solid purple;
+}
+.derfoto {grid-area: derfoto;
+    border: 1px solid firebrick;
+}
+.prefooter {grid-area: prefooter;
+    background-color: rgb(2, 49, 255);
+    border: 1px solid navy;
+    text-align: center;
+}
+.webmapizq {grid-area: webmapizq;
+    background-color: cornflowerblue;
+}
+.webmapcen {grid-area: webmapcen;
+    background-color: cornflowerblue;
+}
+.webmapder {grid-area: webmapder;
+    background-color: cornflowerblue;
+    text-align: left;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: rgb(32, 36, 255);
+    color: white;
+}
+
+.headerbutton {
+    color: rgb(255, 255, 255); font-size: 16px; line-height: 16px; padding: 6px; border-radius: 10px; font-family: Georgia, serif; font-weight: normal; text-decoration: none; font-style: normal; font-variant: normal; text-transform: none; background-image: linear-gradient(to right, rgb(28, 110, 164) 0%, rgb(35, 136, 203) 50%, rgb(20, 78, 117) 100%); box-shadow: rgb(0, 0, 0) 5px 5px 15px 5px; border: 2px solid rgb(28, 110, 164); display: inline-block;}
+    .myButton:hover {
+    background: #1C6EA4; }
+    .myButton:active {
+    background: #144E75; }
