@@ -4,7 +4,7 @@
 
 .gridWeb {
     display: grid;
-    grid-template: auto auto auto auto auto auto auto auto / auto auto auto;
+    grid-template: auto auto auto auto auto auto auto auto auto auto / 33% 33% 33%;
     grid-template-areas: "header header header"
     "navbar navbar navbar"
     "mainfoto mainfoto mainfoto"
@@ -12,26 +12,29 @@
     "izqfoto cenfoto derfoto"
     "prefooter prefooter prefooter"
     "webmapizq webmapcen webmapder"
-    "footer footer footer";
+    "loadingbar loadingbar loadingbar"
+    "footer footer footer"
+    "loadingbar2 loadingbar2 loadingbar2";
     align-content: center;
 }
 
 .header {grid-area: header; 
     background-color: #1e01d8dc;
     border: 1px solid;
+    margin-bottom: 0.5%;
 }
 
 .navbar {grid-area: navbar;
     background-color: #1e01d8dc;
     border: 1px solid;
+    border-radius: 5px
 }
 .mainfoto {grid-area: mainfoto;
-    border: 1px solid lightcoral;
     width: auto;
 }
 
 img {
-    border-radius: 10px;
+    border-radius: 5px;
     width: 100%;
     max-width: auto;
 }
@@ -40,40 +43,87 @@ img {
     border: 1px solid green;
     background-color: rgb(17, 0, 255);
 }
+
 .izqfoto {grid-area: izqfoto;
-    border: 1px solid black;
+    padding-top: 2%;
+    margin: 1%;
 }
 .cenfoto {grid-area: cenfoto;
-    border: 1px solid purple;
+    padding-top: 2%;
+    margin: 1%;
 }
 .derfoto {grid-area: derfoto;
-    border: 1px solid firebrick;
+    padding-top: 2%;
+    margin: 1%;
 }
+
 .prefooter {grid-area: prefooter;
     background-color: rgb(2, 49, 255);
     border: 1px solid navy;
     text-align: center;
+    margin-bottom: 0.5%;
 }
 .webmapizq {grid-area: webmapizq;
     background-color: cornflowerblue;
+    margin-bottom: 3%;
 }
 .webmapcen {grid-area: webmapcen;
     background-color: cornflowerblue;
+    margin-bottom: 3%;
 }
 .webmapder {grid-area: webmapder;
     background-color: cornflowerblue;
     text-align: left;
+    margin-bottom: 3%;
 }
 
 .footer {
     grid-area: footer;
     background-color: rgb(32, 36, 255);
     color: white;
+    margin-top: 1%;
+    margin-bottom: 1%;
 }
 
 .headerbutton {
-    color: rgb(255, 255, 255); font-size: 16px; line-height: 16px; padding: 6px; border-radius: 10px; font-family: Georgia, serif; font-weight: normal; text-decoration: none; font-style: normal; font-variant: normal; text-transform: none; background-image: linear-gradient(to right, rgb(28, 110, 164) 0%, rgb(35, 136, 203) 50%, rgb(20, 78, 117) 100%); box-shadow: rgb(0, 0, 0) 5px 5px 15px 5px; border: 2px solid rgb(28, 110, 164); display: inline-block;}
+    color: rgb(255, 255, 255); font-size: 13px; line-height: 10px; padding: 6px; border-radius: 10px; font-family: Georgia, serif; font-weight: normal; text-decoration: none; font-style: normal; font-variant: normal; text-transform: none; background-image: linear-gradient(to right, rgb(28, 110, 164) 0%, rgb(35, 136, 203) 50%, rgb(20, 78, 117) 100%); box-shadow: rgba(0, 0, 0, 0.36) 2px 3px 6px 0px; border: 2px solid rgb(28, 110, 164); display: inline-block;}
     .myButton:hover {
     background: #1C6EA4; }
     .myButton:active {
     background: #144E75; }
+
+.loadingbar {
+        /* relative: igual que el estático pero
+        depende de las propiedades top, bottom, etc. */
+        grid-area: loadingbar;
+        position: relative;
+        width: 50px;
+        height: 5px;
+        animation-name: loading;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+}
+
+.loadingbar2 {
+    /* relative: igual que el estático pero
+    depende de las propiedades top, bottom, etc. */
+    grid-area: loadingbar2;
+    position: relative;
+    width: 50px;
+    height: 5px;
+    animation-name: loading;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+    
+@keyframes loading {
+        0% {
+            background-color: rgb(52, 6, 255);
+            width: 0%;
+        }
+
+        100% {
+            background-color: rgb(25, 0, 255);
+            width: 100%;
+        }
+}
