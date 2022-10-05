@@ -8,7 +8,7 @@ a:link, a:visited {
     text-decoration: none;
     cursor: default;
 }
-  
+
 a:link:active, a:visited:active {
     color: white
 }
@@ -39,7 +39,7 @@ a:link:active, a:visited:active {
     margin-bottom: 0.5%;
     border-radius: 0.3em;
     color: rgb(255, 255, 255);
-    font-size: 1.4em;
+    font-size: 1em;
     padding-left: 0.7em;
 }
 
@@ -205,7 +205,7 @@ body div.header nav {
     display: none;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1920px) {
     body div.header, body div.header ul, body div.header ul li {
         display: inline;
     }
@@ -215,7 +215,7 @@ body div.header nav {
     }
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 500px) {
     
     body div.header {
         display: flex;
@@ -304,17 +304,17 @@ body div.header nav {
     
     .gridWeb .izqfoto {
         width: 25em;
-        padding-left: 18%;
+        padding-left: 10px;
     }
 
     .gridWeb .cenfoto {
         width: 25em;
-        padding-left: 17%;
+        padding-left: 10px;
     }
 
     .gridWeb .derfoto {
         width: 25em;
-        padding-left: 15%;
+        padding-left: 10px;
     }
 
     .gridWeb .webmapizq {
@@ -327,5 +327,10 @@ body div.header nav {
 
     .gridWeb .webmapder {
         padding: 1%
+    }
+
+    .navbar {
+        font-size: 0.8em;
+        padding-top: 0.4em;
     }
 }
