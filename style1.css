@@ -237,6 +237,129 @@ body div.header nav {
     }
 }
 
+@media only screen and (max-width: 700px) {
+    
+
+    body div.header {
+        display: flex;
+        place-content: space-between;
+    }
+    #menu-check:not(:checked) ~ nav {
+        display: none;
+    }
+    #menu-check:checked ~ nav {
+        display: block;
+    }
+    #menu {
+        display: block;
+        color:rgb(255, 255, 255);
+        background: #0c77be;
+        font-size: 1.2em;
+        font-weight: bold;
+        border: 3px solid white;
+        border-radius: 0.3em;
+        position: absolute;
+        right: 0.5em;
+        top: 0.4em;
+        z-index: 9999;
+    }
+    #menu:hover {
+        color: #0c77be;
+        background: rgb(255, 255, 255);
+    }
+
+    #menu-cerrar {
+        display: none;
+    }
+
+    #menu-check:checked ~ label #menu-abrir {
+        display: none;
+    }
+
+    #menu-check:checked ~ label #menu-cerrar {
+        display: block;
+    }
+
+    body div.header nav {
+        position:absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        background-color: rgb(111, 76, 236);
+        padding-top: 0.5em;
+        padding-right: 1.5em;
+        opacity: 0.8;
+        color: rgb(255, 255, 255);
+        font-size: 1.4em;
+    }
+
+    body div.header nav ul a {
+        color: white;
+        background: none;    
+    }
+
+    body div.header nav ul, body div.header nav ul li {
+        display: block;
+        text-align: right;
+    }
+
+   .gridWeb {
+    display: grid;
+    grid-template: auto auto auto auto auto auto auto auto auto auto / 33% 33% 33%;
+    grid-template-areas: "header header header"
+    "navbar navbar navbar"
+    "mainfoto mainfoto mainfoto"
+    "centeropt centeropt centeropt"
+    "izqfoto cenfoto derfoto"
+    "prefooterr3 prefooterr7 prefooterr1"
+    "webmapizq webmapcen webmapder"
+    "loadingbar loadingbar loadingbar"
+    "footer footer footer"
+    "loadingbar2 loadingbar2 loadingbar2";
+    align-content: center;
+}
+    
+    .gridWeb .izqfoto {
+        width: 100%;
+    }
+
+    .gridWeb .cenfoto {
+        width: 100%;
+    }
+
+    .gridWeb .derfoto {
+        width: 100%;
+    }
+
+    .gridWeb .webmapizq {
+        padding: 1%
+    }
+
+    .gridWeb .webmapcen {
+        padding: 1%
+    }
+
+    .gridWeb .webmapder {
+        padding: 1%
+    }
+
+    .navbar {
+        font-size: 0.8em;
+        padding-top: 0.4em;
+    }
+
+    .formulario {
+        grid-area: formulario;
+        background-color: cornflowerblue;
+        margin-bottom: 1%;
+        padding-bottom: 2%;
+        margin-top: 1%;
+        border-radius: 0.5em;
+    }
+
+
+}
+
 @media only screen and (max-width: 500px) {
     
     body div.header {
@@ -323,6 +446,21 @@ body div.header nav {
         "loadingbar2";
         align-content: center;
         }
+
+        .gridWebcontacto {
+            display: grid;
+            grid-template: auto auto auto auto auto auto auto auto auto / 33% 33% 33%;
+            grid-template-areas: "header header header"
+            "navbar navbar navbar"
+            "formulario formulario formulario"
+            "webmapizq webmapizq webmapizq"
+            "webmapcen webmapcen webmapcen"
+            "webmapder webmapder webmapder"
+            "loadingbar loadingbar loadingbar"
+            "footer footer footer"
+            "loadingbar2 loadingbar2 loadingbar2";
+            align-content: center;
+        }
     
     .gridWeb .izqfoto {
         width: 300px;
@@ -349,6 +487,20 @@ body div.header nav {
 
     .gridWeb .webmapder {
         padding: 1%
+    }
+    .gridWebcontacto .webmapizq {
+        margin-bottom: 1%;
+        padding-bottom: 1%;
+    }
+
+    .gridWebcontacto .webmapcen {
+        margin-bottom: 1%;
+        padding-bottom: 1%;
+    }
+
+    .gridWebcontacto .webmapder {
+        margin-bottom: 1%;
+        padding-bottom: 1%;
     }
 
     .navbar {
