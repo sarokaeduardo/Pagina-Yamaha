@@ -33,6 +33,19 @@ a:link:active, a:visited:active {
     align-content: center;
 }
 
+.gridWebcontacto {
+    display: grid;
+    grid-template: auto auto auto auto auto auto auto / 33% 33% 33%;
+    grid-template-areas: "header header header"
+    "navbar navbar navbar"
+    "formulario formulario formulario"
+    "webmapizq webmapcen webmapder"
+    "loadingbar loadingbar loadingbar"
+    "footer footer footer"
+    "loadingbar2 loadingbar2 loadingbar2";
+    align-content: center;
+}
+
 .header {grid-area: header; 
     background-color: #1e01d8dc;
     border: 1px solid;
@@ -205,6 +218,15 @@ body div.header nav {
     display: none;
 }
 
+.formulario {
+    grid-area: formulario;
+    background-color: cornflowerblue;
+    margin-bottom: 1%;
+    padding-bottom: 2%;
+    margin-top: 0.5%;
+    border-radius: 0.5em;
+}
+
 @media only screen and (max-width: 1920px) {
     body div.header, body div.header ul, body div.header ul li {
         display: inline;
@@ -303,18 +325,18 @@ body div.header nav {
         }
     
     .gridWeb .izqfoto {
-        width: 25em;
-        padding-left: 10px;
+        width: 300px;
+        padding-left: 11%;
     }
 
     .gridWeb .cenfoto {
-        width: 25em;
-        padding-left: 10px;
+        width: 300px;
+        padding-left: 11%;
     }
 
     .gridWeb .derfoto {
-        width: 25em;
-        padding-left: 10px;
+        width: 300px;
+        padding-left: 11%;
     }
 
     .gridWeb .webmapizq {
@@ -333,4 +355,15 @@ body div.header nav {
         font-size: 0.8em;
         padding-top: 0.4em;
     }
+
+    .formulario {
+        grid-area: formulario;
+        background-color: cornflowerblue;
+        margin-bottom: 1%;
+        padding-bottom: 2%;
+        margin-top: 1%;
+        border-radius: 0.5em;
+    }
+
+
 }

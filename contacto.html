@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto Yamaha ARG</title>
+    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="animate.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@1,200&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+</head>
+<body class="gridWebcontacto">
+    
+
+    <div class="header">
+        <input type="checkbox" id="menu-check">
+        <label id="menu" for="menu-check">
+            <span id="menu-abrir">&#9776;</span>
+            <span id="menu-cerrar">X</span>
+        </label>
+        <nav>
+            <ul>
+                <li><a href="index.html" style="font-family: 'Titillium Web'; color: white; padding-right: 0.3em">Inicio</a></li>
+                <li><a href="motos.html" style="font-family: 'Titillium Web'; color: white; padding-right: 0.3em">Motos</a></li>
+                <li><a href="historia.html" style="font-family: 'Titillium Web'; color: white; padding-right: 0.3em">Historia</a></li>
+                <li><a href="agencias.html" style="font-family: 'Titillium Web'; color: white; padding-right: 0.3em">Agencias</a></li>
+                <li><a href="contacto.html" style="font-family: 'Titillium Web'; color: white; padding-right: 0.3em">Contacto</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="navbar">
+        <img src="favicon-32x32.png" style="max-width: 1.8em; margin-left: 0.4em; margin-top: 0.3em;">
+        <span class="animate__animated animate__fadeIn" style="color:white; font-size: 1.3rem; font-family: 'Titillium Web', sans-serif;" >Yamaha Motors Argentina</span>
+    </div>
+    <div class="formulario">
+        <h2 style="font-family: 'Titillium Web'; color: rgb(56, 9, 226); padding-left: 0.8em; padding-top: 2%;">Formulario de Contacto:</h2>
+        <form name="valida">
+            <table>
+                <tr>
+                    <td align="right" style="padding-left: 1.2em; font-family: 'Titillium Web'; font-size: 1.1em; color: white;">Nombre Completo:</td><br>
+                    <td><input type="text" name="nombre" size="30" maxlength="50"></td>
+                </tr>
+                <tr>
+                    <td align="right" style="font-family: 'Titillium Web'; font-size: 1.1em; color: white;">Apellido:</td><br>
+                    <td><input type="text" name="apellido" size="30" maxlength="30"></td>
+                </tr>
+                <tr>
+                    <td align="right" style="font-family: 'Titillium Web'; font-size: 1.1em; color: white;" >Edad: </td>
+                    <td><input type="text" name="edad" size="3" maxlength="2"></td>
+                </tr>
+                <tr>
+                    <td align="right" style="font-family: 'Titillium Web'; font-size: 1.1em; color: white;" >Teléfono: (011) </td>
+                    <td><input type="text" name="tel" size="9" maxlength="8"></td>
+                </tr>
+                <tr>
+                    <td align="right" style="font-family: 'Titillium Web'; font-size: 1.1em; color: white;">Moto:</td>
+                    <td>
+                        <select name=moto>
+                            <option value="Elegir" style="font-family: 'Titillium Web'; font-size: 1.1em; color: black;">Elegir
+                            <option value="Supersports" style="font-family: 'Titillium Web'; font-size: 1.1em; color: black;">Supersports
+                            <option value="Trail" style="font-family: 'Titillium Web'; font-size: 1.1em; color: black;">Trail
+                            <option value="NeoCafe" style="font-family: 'Titillium Web'; font-size: 1.1em; color: black;">NeoCafe
+                            <option value="Enduro" style="font-family: 'Titillium Web'; font-size: 1.1em; color: black;">Enduro
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center" style="padding-top: 5%">
+                        <input type="button" id="btnsend" value="Enviar" onclick="validarSend()" style="font-family: 'Titillium Web'; font-size: 1.3em; color: black;">
+                    </td>
+                </tr>
+            </table>
+            </form>
+            <script>        
+                function validarSend() {
+                    if (document.valida.nombre.value.length <= 2) {
+                        alert("Escriba su nombre completo por favor...")
+                        document.valida.nombre.focus()
+                        return 0;
+                    }
+
+                    if (document.valida.apellido.value.length <= 3) {
+                        alert("Escriba su apellido/s completos por favor...")
+                        document.valida.apellido.focus()
+                        return 0;
+                    }
+
+                    edad = document.valida.edad.value
+                    edad = validarEntero(edad)
+                    document.valida.edad.value = edad
+                    if (edad == "") {
+                        alert("Introduzca un número entero para su edad por favor...")
+                        document.valida.edad.focus()
+                        return 0;
+                    } else {
+                        if (edad < 18) {
+                            alert("Debe ser mayor de 18 años.")
+                            document.valida.edad.focus()
+                            return 0;
+                        }
+                    }
+
+                    tel = document.valida.tel.value
+                    tel = validarEntero(tel)
+                    document.valida.tel.value = tel
+                    if (tel == "") {
+                        alert("Introduzca un número entero para su teléfono por favor...")
+                        document.valida.tel.focus()
+                        return 0;
+                    } else {
+                        if (document.valida.tel.value.length < 8) {
+                            alert("Debe introducir un teléfono correcto de 8 dígitos")
+                            document.valida.tel.focus()
+                            return 0;
+                        }
+                    }
+            
+                    if (document.valida.moto.selectedIndex == 0) {
+                        alert("Debe elegir un estilo de moto de preferencia para ser contactado...")
+                        document.valida.moto.focus()
+                        return 0;
+                    }
+                    alert("Muchas gracias, será contactado a la brevedad. Saludos!!!");
+                    document.valida.submit();
+                }
+                
+                function validarEntero(valor) {
+                    valor = parseInt(valor)
+            
+                    if (isNaN(valor)) {
+                        return ""
+                    } else {
+                        return valor
+                    }
+                }
+                </script>
+    </div>
+    <div class="webmapizq">
+        <p style="color:white; font-family: 'Titillium Web', sans-serif; font-size: large" >Vehiculos</p>
+        <a href="motos.html" style="font-family: 'Titillium Web', sans-serif; font-weight: bold">Vehículos Sport</a><br>
+
+    </div>
+    <div class="webmapcen">
+        <p style="color:white; font-family: 'Titillium Web', sans-serif; font-size: large; ">Soporte</p>
+        <a href="agencias.html" style="font-family: 'Titillium Web', sans-serif; font-weight: bold;">Encuentre su Agencia</a><br>
+        <a href="contacto.html" style="font-family: 'Titillium Web', sans-serif; font-weight: bold;">Contacto</a><br>
+    </div>
+    <div class="webmapder">
+        <p style="color:white; font-family: 'Titillium Web', sans-serif; font-size: large" >Experimente Yamaha</p>
+        <a href="corporacion.html" style="font-family: 'Titillium Web', sans-serif; font-weight: bold">Historia</a><br>
+        <a href="index.html" style="font-family: 'Titillium Web', sans-serif; font-weight: bold">Volver al Inicio</a><br>
+    </div><br>
+    <div class="loadingbar"></div>
+    <div class="footer">
+        <p style="text-align: center; font-family: 'Titillium Web', sans-serif; font-size: 1em;">Yamaha Corporation<br>
+        2022 Todos los derechos reservados@</p>
+    </div>
+    <div class="loadingbar2"></div>
+</body>
+</html>
