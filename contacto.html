@@ -14,6 +14,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <script src="https://unpkg.com/vue@next"></script>
 </head>
 <body class="gridWebcontacto">
     
@@ -71,8 +72,9 @@
                     </td>
                 </tr>
                 <tr>
-                    <td colspan="2" align="center" style="padding-top: 5%">
-                        <input type="button" id="btnsend" value="Enviar" onclick="validarSend()" style="font-family: 'Titillium Web'; font-size: 1.3em; color: black;">
+                    <!-- Se Agrega Boton con VUE -->
+                    <td id="app" colspan="2" align="center" style="padding-top: 5%">
+                        <cambio></cambio>
                     </td>
                 </tr>
             </table>
@@ -162,5 +164,30 @@
         2022 Todos los derechos reservados@</p>
     </div>
     <div class="loadingbar2"></div>
+
+    <!-- Script de VUE -->
+    <script>
+        const componente = {
+            template: `<button v-on:mouseover = "cambiarNombre()" v-on:mouseout = "reestablecerNombre()" id="btnsend" value="Enviar" onclick="validarSend()" style="font-family: 'Titillium Web'; font-size: 1.3em; color: black;"><h4><span id="nombre">{{titulo}}</span></h4>
+            </button>`,
+            data() {
+                return { titulo: "Enviar" }
+            },
+            methods: {
+                cambiarNombre() { this.titulo = "Por favor, recuerde completar correctamente todos los datos antes de finalizar el envío de la información." },
+                reestablecerNombre() { this.titulo = "Enviar" }
+            }
+        }
+
+        const miAplicacion = Vue.createApp({
+            data() {
+                return {}
+            },
+            components: {
+                'cambio': componente
+            }
+        }).mount("#app")
+
+    </script>
 </body>
 </html>
