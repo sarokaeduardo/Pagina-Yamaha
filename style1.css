@@ -46,6 +46,23 @@ a:link:active, a:visited:active {
     align-content: center;
 }
 
+.gridWebmotos {
+    display: grid;
+    grid-template: auto auto auto auto auto auto auto auto auto auto auto / 33% 33% 33%;
+    grid-template-areas: "header header header"
+    "navbar navbar navbar"
+    "intro intro intro"
+    "centeropt centeropt centeropt"
+    "flexContMotos1 flexContMotos1 flexContMotos1"
+    "flexContMotos2 flexContMotos2 flexContMotos2"
+    "flexContMotos3 flexContMotos3 flexContMotos3"
+    "webmapizq webmapcen webmapder"
+    "loadingbar3 loadingbar3 loadingbar3"
+    "footer footer footer"
+    "loadingbar4 loadingbar4 loadingbar4";
+    align-content: center;
+}
+
 .header {grid-area: header; 
     background-color: #1e01d8dc;
     border: 1px solid;
@@ -61,6 +78,7 @@ a:link:active, a:visited:active {
     border: 1px solid;
     border-radius: 0.3em;
 }
+
 .mainfoto {
     grid-area: mainfoto;
     width: auto;
@@ -155,8 +173,6 @@ img {
 }
 
 .loadingbar {
-        /* relative: igual que el estático pero
-        depende de las propiedades top, bottom, etc. */
         grid-area: loadingbar;
         position: relative;
         width: 50px;
@@ -167,8 +183,6 @@ img {
 }
 
 .loadingbar2 {
-    /* relative: igual que el estático pero
-    depende de las propiedades top, bottom, etc. */
     grid-area: loadingbar2;
     position: relative;
     width: 50px;
@@ -177,6 +191,85 @@ img {
     animation-duration: 2s;
     animation-iteration-count: infinite;
 }
+
+.loadingbar3 {
+    grid-area: loadingbar3;
+    position: relative;
+    width: 50px;
+    height: 5px;
+    animation-name: loading;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+.loadingbar4 {
+    grid-area: loadingbar4;
+    position: relative;
+    width: 50px;
+    height: 5px;
+    animation-name: loading;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+.intro {
+    grid-area: intro;
+    padding-top: 0%;
+    margin-top: 1.5%;
+    border-radius: 0.3em;
+}
+
+.flexContMotos1 {
+    grid-area: flexContMotos1;
+    display: flex;
+    justify-content: space-around;
+    width: auto;
+    background-color:white;
+    color: rgb(32, 36, 255);
+    border-radius: 0.3em;
+}
+
+.flexContMotos2 {
+    grid-area: flexContMotos2;
+    display: flex;
+    justify-content: space-around;
+    width: auto;
+    background-color: white;
+    color: rgb(32, 36, 255);
+    border-radius: 0.3em;
+}
+
+.flexContMotos3 {
+    grid-area: flexContMotos3;
+    display: flex;
+    justify-content: space-around;
+    width: auto;
+    background-color: white;
+    color: rgb(32, 36, 255);
+    border-radius: 0.3em;
+    margin-bottom: 3%;
+}
+
+.flexTexto {
+    margin: 1.2em;
+    flex-grow: 0;
+    padding-top: 6%;
+}
+
+.flexFoto {
+    margin: 0px;
+    width: fit-content;
+    border-radius: 1.3em;
+}
+
+.texto {
+    color: rgb(52, 6, 255);
+    text-align: center;
+    font-size: 1.3em;
+    font-family: 'Titillium Web'
+}
+
+
     
 @keyframes loading {
         0% {
@@ -303,7 +396,7 @@ body div.header nav {
         text-align: right;
     }
 
-   .gridWeb {
+    .gridWeb {
     display: grid;
     grid-template: auto auto auto auto auto auto auto auto auto auto / 33% 33% 33%;
     grid-template-areas: "header header header"
@@ -317,7 +410,7 @@ body div.header nav {
     "footer footer footer"
     "loadingbar2 loadingbar2 loadingbar2";
     align-content: center;
-}
+    }
     
     .gridWeb .izqfoto {
         width: 100%;
@@ -461,6 +554,24 @@ body div.header nav {
             "loadingbar2 loadingbar2 loadingbar2";
             align-content: center;
         }
+
+        .gridWebmotos {
+            display: grid;
+            grid-template: auto auto auto auto auto auto auto auto auto auto auto auto / 33% 33% 33%;
+            grid-template-areas: "navbar navbar navbar"
+            "intro intro intro"
+            "centeropt centeropt centeropt"
+            "flexContMotos1 flexContMotos1 flexContMotos1"
+            "flexContMotos2 flexContMotos2 flexContMotos2"
+            "flexContMotos3 flexContMotos3 flexContMotos3"
+            "webmapizq webmapizq webmapizq"
+            "webmapcen webmapcen webmapcen"
+            "webmapder webmapder webmapder"
+            "loadingbar3 loadingbar3 loadingbar3"
+            "footer footer footer"
+            "loadingbar4 loadingbar4 loadingbar4";
+            align-content: center;
+        }
     
     .gridWeb .izqfoto {
         width: 300px;
@@ -505,6 +616,22 @@ body div.header nav {
         margin-bottom: 1%;
         padding-bottom: 1%;
     }
+
+    .gridWebmotos .webmapizq {
+        margin-bottom: 1%;
+        padding-bottom: 1%;
+    }
+
+    .gridWebmotos .webmapcen {
+        margin-bottom: 1%;
+        padding-bottom: 1%;
+    }
+
+    .gridWebmotos .webmapder {
+        margin-bottom: 1%;
+        padding-bottom: 1%;
+    }
+
 
     .navbar {
         font-size: 0.8em;
