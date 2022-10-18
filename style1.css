@@ -63,6 +63,28 @@ a:link:active, a:visited:active {
     align-content: center;
 }
 
+.gridWebhistoria {
+    display: grid;
+    grid-template: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto/ 33% 33% 33%;
+    grid-template-areas: "header header header"
+    "navbar navbar navbar"
+    "centeropt centeropt centeropt"
+    "fundador1 historia1 historia1"
+    "fundador1 historia2 historia2"
+    "historia3 historia3 fundador2"
+    "centeropt2 centeropt2 centeropt2"
+    "parrafo5 parrafo5 parrafo5"
+    "parrafo6 parrafo6 parrafo6"
+    "parrafo7 parrafo7 parrafo7"
+    "parrafo8 parrafo8 parrafo8"
+    "parrafo9 parrafo9 parrafo9"
+    "webmapizq webmapcen webmapder"
+    "loadingbar loadingbar loadingbar"
+    "footer footer footer"
+    "loadingbar2 loadingbar2 loadingbar2";
+    align-content: center;
+}
+
 .header {grid-area: header; 
     background-color: #1e01d8dc;
     border: 1px solid;
@@ -111,8 +133,17 @@ img {
 
 .centeropt {grid-area: centeropt;
     border: 1px solid green;
-    background-color: rgb(17, 0, 255);
+    background-color: #1e01d8dc;
     border-radius: 0.3em;
+    margin-top: 1%;
+}
+
+.centeropt2 {grid-area: centeropt2;
+    border: 1px solid green;
+    background-color: #1e01d8dc;
+    border-radius: 0.3em;
+    margin-top: 1%;
+    margin-bottom: 1%;
 }
 
 .izqfoto {grid-area: izqfoto;
@@ -212,6 +243,8 @@ img {
     animation-iteration-count: infinite;
 }
 
+/* Agustin */
+
 .intro {
     grid-area: intro;
     padding-top: 0%;
@@ -269,7 +302,183 @@ img {
     font-family: 'Titillium Web'
 }
 
+/* Cristian */
 
+.little_div_floating {
+    display: inline-block;
+    vertical-align: middle;
+    width: 80%;
+}
+
+
+img.torakusu {
+    float: left;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+img.motovieja {
+    float: right;
+    margin-left:30px;
+    width: 90%;
+    height: auto;
+}
+
+.primerparrafo{
+    
+    float: left;
+    margin-bottom: 60px;
+    width:fit-content;
+    padding-left: 10em;
+    padding-right: 10em;
+}
+
+.fundador1 {
+    grid-area: fundador1;
+    margin: 5%;
+    margin-top: 8%;
+    border-radius: 0.3em;
+    width: auto;
+}
+
+.fundador2 {
+    grid-area: fundador2;
+    margin: 5%;
+    margin-top: 8%;
+    border-radius: 0.3em;
+    width: auto;
+    margin-right: 10%;
+}
+
+.historia1 {
+    grid-area: historia1;
+    font-size: 1.4em;
+    font-family: 'Titillium Web';
+    text-align: center;
+    padding-top: 5%;
+    font-weight: bold;
+}
+
+.historia2 {
+    grid-area: historia2;
+    font-size: 1.4em;
+    font-family: 'Titillium Web';
+    text-align: center;
+    padding-top: 1%;
+    background-color: #0c77be;
+    border-radius: 0.3em;
+}
+
+.historia3 {
+    grid-area: historia3;
+    font-size: 1.4em;
+    font-family: 'Titillium Web';
+    text-align: center;
+    padding-top: 10%;
+    font-weight: bold;
+}
+
+.segundoparrafo{
+    float: left;
+    margin-bottom: 60px;
+    width:fit-content;
+    padding-left: 10em;
+    padding-right: 10em;
+
+}
+.tercerparrafo{
+    float: left;
+    margin-bottom: 60px;
+    width:fit-content;
+    padding-left: 10em;
+    padding-right: 10em;
+}
+
+.origen{
+    padding-left: 5em;
+}
+
+.parrafo5 {
+    grid-area: parrafo5;
+    width: 100%;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    font-family: 'Titillium Web', sans-serif; 
+    font-weight: bold; 
+    font-size: 1.4em;  
+}
+
+.parrafo6 {
+    grid-area: parrafo6;
+    width: 100%;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    font-family: 'Titillium Web', sans-serif; 
+    font-weight: bold; 
+    font-size: 1.4em;  
+}
+
+.parrafo7 {
+    grid-area: parrafo7;
+    width: 100%;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    font-family: 'Titillium Web', sans-serif; 
+    font-weight: bold; 
+    font-size: 1.4em;  
+}
+
+.parrafo8 {
+    grid-area: parrafo8;
+    width: 100%;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    font-family: 'Titillium Web', sans-serif; 
+    font-weight: bold; 
+    font-size: 1.4em;  
+}
+
+.parrafo9 {
+    grid-area: parrafo9;
+    width: 100%;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    font-family: 'Titillium Web', sans-serif; 
+    font-weight: bold; 
+    font-size: 1.4em;  
+}
+
+
+
+img.logos {
+    float: left;
+    margin-right: 30px;
+    width: 220px;
+    height: auto;
+    overflow: hidden;
+    
+}
+
+img.logo1 {
+    vertical-align: middle;
+    float: left;
+    margin-right: 30px;
+    width: 15%;
+    display: flex;
+    justify-content: center;
+    align-items:center;  
+}
     
 @keyframes loading {
         0% {
@@ -411,7 +620,88 @@ body div.header nav {
     "loadingbar2 loadingbar2 loadingbar2";
     align-content: center;
     }
+
+    .gridWebhistoria {
+        display: grid;
+        grid-template: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto / 33% 33% 33%;
+        grid-template-areas: "header header header"
+        "navbar navbar navbar"
+        "centeropt centeropt centeropt"
+        "fundador1 historia1 historia1"
+        "historia2 historia2 historia2"
+        "historia3 historia3 fundador2"
+        "centeropt2 centeropt2 centeropt2"
+        "parrafo5 parrafo5 parrafo5"
+        "parrafo6 parrafo6 parrafo6"
+        "parrafo7 parrafo7 parrafo7"
+        "parrafo8 parrafo8 parrafo8"
+        "parrafo9 parrafo9 parrafo9"
+        "webmapizq webmapcen webmapder"
+        "loadingbar loadingbar loadingbar"
+        "footer footer footer"
+        "loadingbar2 loadingbar2 loadingbar2";
+        align-content: center;
+    }
     
+    .gridWebhistoria .historia1 {
+        grid-area: historia1;
+        font-size: 1.0em;
+        font-family: 'Titillium Web';
+        text-align: center;
+        padding-top: 5%;
+        font-weight: bold;
+    }
+    
+    .gridWebhistoria .historia2 {
+        grid-area: historia2;
+        font-size: 1.0em;
+        font-family: 'Titillium Web';
+        text-align: center;
+        padding-top: 1%;
+        background-color: #0c77be;
+        border-radius: 0.3em;
+        margin-top: 2%;
+    }
+    
+    .gridWebhistoria .historia3 {
+        grid-area: historia3;
+        font-size: 1.0em;
+        font-family: 'Titillium Web';
+        text-align: center;
+        padding-top: 5%;
+        font-weight: bold;
+    }
+
+    .gridWebhistoria .fundador2 {
+        grid-area: fundador2;
+        margin: 5%;
+        margin-top: 50%;
+        border-radius: 0.3em;
+        width: auto;
+        margin-right: 10%;
+    }
+
+    .gridWebhistoria .parrafo5 {
+        font-size: 1.0em;
+    }
+
+    .gridWebhistoria .parrafo6 {
+        font-size: 1.0em;
+    }
+
+    .gridWebhistoria .parrafo7 {
+        font-size: 1.0em;
+    }
+
+    .gridWebhistoria .parrafo8 {
+        font-size: 1.0em;
+    }
+
+    .gridWebhistoria .parrafo9 {
+        font-size: 1.0em;
+    }
+
+
     .gridWeb .izqfoto {
         width: 100%;
     }
@@ -572,6 +862,52 @@ body div.header nav {
             "loadingbar4 loadingbar4 loadingbar4";
             align-content: center;
         }
+
+        .gridWebhistoria {
+            display: grid;
+            grid-template-columns: 100%;
+            grid-template-areas: "header" 
+            "navbar"
+            "centeropt"
+            "fundador1"
+            "historia1"
+            "historia2"
+            "fundador2"
+            "historia3"
+            "centeropt2"
+            "parrafo5"
+            "parrafo6"
+            "parrafo7"
+            "parrafo8"
+            "parrafo9"
+            "webmapizq"
+            "webmapcen"
+            "webmapder"
+            "loadingbar"
+            "footer"
+            "loadingbar2";
+            align-content: center;
+            }
+
+            .gridWebhistoria .parrafo5 {
+                font-size: 1.4em;
+            }
+
+            .gridWebhistoria .parrafo6 {
+                font-size: 1.4em;
+            }
+
+            .gridWebhistoria .parrafo7 {
+                font-size: 1.4em;
+            }
+
+            .gridWebhistoria .parrafo8 {
+                font-size: 1.4em;
+            }
+
+            .gridWebhistoria .parrafo9 {
+                font-size: 1.4em;
+            }
     
     .gridWeb .izqfoto {
         width: 300px;
@@ -630,6 +966,41 @@ body div.header nav {
     .gridWebmotos .webmapder {
         margin-bottom: 1%;
         padding-bottom: 1%;
+    }
+
+    .gridWebhistoria .webmapizq {
+        margin-bottom: 1%;
+        padding-bottom: 1%;
+    }
+
+    .gridWebhistoria .webmapcen {
+        margin-bottom: 1%;
+        padding-bottom: 1%;
+    }
+
+    .gridWebhistoria .webmapder {
+        margin-bottom: 1%;
+        padding-bottom: 1%;
+    }
+
+    .gridWebhistoria .historia1 {
+        font-size: 1.4em;
+        margin-bottom: 4%;
+    }
+
+    .gridWebhistoria .historia2 {
+        font-size: 1.4em;
+        margin-bottom: 4%;
+    }
+
+    .gridWebhistoria .historia3 {
+        font-size: 1.4em;
+        margin-bottom: 5%;
+    }
+
+    .gridWebhistoria .fundador2 {
+        margin: 5%;
+        margin-right: 13%;
     }
 
 
