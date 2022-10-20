@@ -85,6 +85,21 @@ a:link:active, a:visited:active {
     align-content: center;
 }
 
+.gridWebagencias {
+    display: grid;
+    grid-template: auto auto auto auto auto auto auto auto auto/ 33% 33% 33%;
+    grid-template-areas: "header header header"
+    "navbar navbar navbar"
+    "textoAgencias textoAgencias textoAgencias"
+    "flexTexto1 flexTexto1 flexFoto1"
+    "flexFoto2 flexTexto2 flexTexto2"
+    "webmapizq webmapcen webmapder"
+    "loadingbar loadingbar loadingbar"
+    "footer footer footer"
+    "loadingbar2 loadingbar2 loadingbar2";
+    align-content: center;
+}
+
 .header {grid-area: header; 
     background-color: #1e01d8dc;
     border: 1px solid;
@@ -287,15 +302,62 @@ img {
 }
 
 .flexTexto {
+    margin: 5px;
+    flex-grow: 1;
+    padding-top: 3%;
+    font-size: 1.4em;
+    margin: 3%;
+}
+
+
+.flexTexto1 {
+    grid-area: flexTexto1;
     margin: 1.2em;
-    flex-grow: 0;
-    padding-top: 6%;
+    padding-top: 0%;
+    background-color: blue;
+    color: white;
+    font-size: 0.8em;
+    font-family: 'Titillium Web';
+    border-radius: 0.3em;
+    padding: 5%;
+}
+
+.flexTexto2 {
+    grid-area: flexTexto2;
+    margin: 1.2em;
+    padding-top: 0%;
+    background-color: blue;
+    color: white;
+    font-size: 0.8em;
+    font-family: 'Titillium Web';
+    border-radius: 0.3em;
+    padding: 5%;
+}
+
+.flexFoto1 {
+    grid-area: flexFoto1;
+    margin: 0px;
+    width: auto;
+    display: flex;
+    color: white;
+    border-radius: 0.3em;
+    margin: 3.5%;
+}
+
+.flexFoto2 {
+    grid-area: flexFoto2;
+    margin: 0px;
+    width: auto;
+    display: flex;
+    color: white;
+    border-radius: 0.3em;
+    margin: 3.5%;
 }
 
 .flexFoto {
-    margin: 0px;
+    margin: 5px;
+    height: 97%;
     width: fit-content;
-    border-radius: 1.3em;
 }
 
 .texto {
@@ -303,6 +365,16 @@ img {
     text-align: center;
     font-size: 1.3em;
     font-family: 'Titillium Web'
+}
+
+.textoAgencias {
+    grid-area: textoAgencias;
+    color: rgb(52, 6, 255);
+    text-align: center;
+    font-size: 1.4em;
+    font-family: 'Titillium Web';
+    margin: 1%;
+    margin-top: 2%;
 }
 
 /* Cristian */
@@ -645,6 +717,33 @@ body div.header nav {
         "loadingbar2 loadingbar2 loadingbar2";
         align-content: center;
     }
+
+    .gridWebagencias {
+        display: grid;
+        grid-template: auto auto auto auto auto auto auto auto auto/ 33% 33% 33%;
+        grid-template-areas: "header header header"
+        "navbar navbar navbar"
+        "textoAgencias textoAgencias textoAgencias"
+        "flexTexto1 flexFoto1 flexFoto1"
+        "flexFoto2 flexFoto2 flexTexto2"
+        "webmapizq webmapcen webmapder"
+        "loadingbar loadingbar loadingbar"
+        "footer footer footer"
+        "loadingbar2 loadingbar2 loadingbar2";
+        align-content: center;
+    }
+
+    .gridWebmotos .flexTexto {
+        font-size: 0.8em;
+    }
+
+    .gridWebagencias .flexTexto1 {
+        font-size: 0.6em;
+    }
+
+    .gridWebagencias .flexTexto2 {
+        font-size: 0.6em;
+    }
     
     .gridWebhistoria .historia1 {
         grid-area: historia1;
@@ -892,6 +991,41 @@ body div.header nav {
             align-content: center;
             }
 
+            .gridWebagencias {
+                display: grid;
+                grid-template-columns: 100%;
+                grid-template-areas: "header" 
+                "navbar"
+                "textoAgencias"
+                "flexTexto1"
+                "flexFoto1"
+                "flexTexto2"
+                "flexFoto2"
+                "webmapizq"
+                "webmapcen"
+                "webmapder"
+                "loadingbar"
+                "footer"
+                "loadingbar2";
+                align-content: center;
+                }
+
+                .gridWebagencias .webmapizq {
+                    margin-bottom: 1%;
+                    padding-bottom: 1%;
+                }
+            
+                .gridWebagencias .webmapcen {
+                    margin-bottom: 1%;
+                    padding-bottom: 1%;
+                }
+            
+                .gridWebagencias .webmapder {
+                    margin-bottom: 1%;
+                    padding-bottom: 1%;
+                }
+
+
             .gridWebhistoria .parrafo5 {
                 font-size: 1.4em;
             }
@@ -910,6 +1044,10 @@ body div.header nav {
 
             .gridWebhistoria .parrafo9 {
                 font-size: 1.4em;
+            }
+
+            .gridWebmotos .flexTexto {
+                font-size: 0.5em;
             }
     
     .gridWeb .izqfoto {
