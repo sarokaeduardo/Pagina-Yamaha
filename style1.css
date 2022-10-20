@@ -602,6 +602,11 @@ body div.header nav {
     padding-bottom: 2%;
     margin-top: 0.5%;
     border-radius: 0.5em;
+    padding-inline: 35%;
+}
+
+.btnsend {
+    text-align: center;
 }
 
 @media only screen and (max-width: 1920px) {
@@ -842,6 +847,16 @@ body div.header nav {
         border-radius: 0.5em;
     }
 
+    .formulario {
+        grid-area: formulario;
+        background-color: cornflowerblue;
+        margin-bottom: 1%;
+        padding-bottom: 2%;
+        margin-top: 0.5%;
+        border-radius: 0.5em;
+        padding-inline: 20%;
+    }
+
 
 }
 
@@ -1048,6 +1063,16 @@ body div.header nav {
 
             .gridWebmotos .flexTexto {
                 font-size: 0.5em;
+            }
+
+            .formulario {
+                grid-area: formulario;
+                background-color: cornflowerblue;
+                margin-bottom: 1%;
+                padding-bottom: 2%;
+                margin-top: 0.5%;
+                border-radius: 0.5em;
+                padding-inline: 5%;
             }
     
     .gridWeb .izqfoto {
