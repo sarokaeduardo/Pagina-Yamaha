@@ -6,18 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Historia Yamaha</title>
-    <link rel="stylesheet" href="style1.css">
-    <link rel="stylesheet" href="animate.css">
+    <link rel="stylesheet" href="/static/css/style1.css">
+    <link rel="stylesheet" href="/static/css/animate.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@1,200&display=swap" rel="stylesheet">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/static/img/favicon-16x16.png">
     <script src="https://unpkg.com/vue@next"></script>
 </head>
 <body class="gridWebhistoria">
-    
+
     <div class="header">
         <input type="checkbox" id="menu-check">
         <label id="menu" for="menu-check">
@@ -26,16 +26,16 @@
         </label>
         <nav>
             <ul>
-                <li><a href="index.html" style="font-family: 'Titillium Web'; color: white; padding-right: 0.3em">Inicio</a></li>
-                <li><a href="motos.html" style="font-family: 'Titillium Web'; color: white; padding-right: 0.3em">Motos</a></li>
-                <li><a href="historia.html" style="font-family: 'Titillium Web'; color: white; padding-right: 0.3em">Historia</a></li>
-                <li><a href="agencias.html" style="font-family: 'Titillium Web'; color: white; padding-right: 0.3em">Agencias</a></li>
-                <li><a href="contacto.html" style="font-family: 'Titillium Web'; color: white; padding-right: 0.3em">Contacto</a></li>
+                <li><a href="{{ url_for('index') }}" style="font-family: 'Titillium Web'; color: white; padding-right: 0.3em">Inicio</a></li>
+                <li><a href="{{ url_for('motos') }}" style="font-family: 'Titillium Web'; color: white; padding-right: 0.3em">Motos</a></li>
+                <li><a href="{{ url_for('historia') }}" style="font-family: 'Titillium Web'; color: white; padding-right: 0.3em">Historia</a></li>
+                <li><a href="{{ url_for('agencias') }}" style="font-family: 'Titillium Web'; color: white; padding-right: 0.3em">Agencias</a></li>
+                <li><a href="{{ url_for('contacto') }}" style="font-family: 'Titillium Web'; color: white; padding-right: 0.3em">Contacto</a></li>
             </ul>
         </nav>
     </div>
     <div class="navbar">
-        <img src="favicon-32x32.png" style="max-width: 1.8em; margin-left: 0.4em; margin-top: 0.3em;">
+        <img src="/static/img/favicon-32x32.png" style="max-width: 1.8em; margin-left: 0.4em; margin-top: 0.3em;">
         <span class="animate__animated animate__fadeIn" style="color:white; font-size: 1.3rem; font-family: 'Titillium Web', sans-serif;" >Yamaha - Revs your Heart®</span>
     </div>
     
@@ -44,7 +44,7 @@
     </div>
 
     <div class="fundador1"> 
-        <img src="torakusu-yamaha.jpg" class="torakusu">
+        <img src="/static/img/torakusu-yamaha.jpg" class="torakusu">
     </div>
     <div class="historia1">
     <p class="p">Yamaha toma el nombre de su fundador, el japonés <strong>Torakusu Yamaha</strong>, quien ya en 1887 construye su primer órgano musical, una habilidad artesanal que supuso el origen de un grupo corporativo y multinacional conocido hoy en día por su nivel de tecnología, capacidad de producción y ventas mundiales.</p>
@@ -60,7 +60,7 @@
         <p>Yamaha Motor Co., Ltd. es hoy en día una referencia mundial en su sector. Con cerca de 57.000 empleados en todo el mundo, Yamaha Motor Co. Ltd. produce en la actualidad todo tipo de motocicletas, motos de agua y nieve, motores fuera borda, Quads-ATV<span class="Apple-converted-space">&nbsp; </span>y vehículos de campo, coches de golf, bicicletas, generadores y otras tecnologías avanzadas de uso doméstico, agrícola e industrial.</p>
     </div>
     <div class="fundador2">
-        <img src="Kawakami.jpg" class="motovieja"> 
+        <img src="/static/img/Kawakami.jpg" class="motovieja"> 
     </div>
 
     <div class="centeropt2">
@@ -68,24 +68,24 @@
     </div>
 
     <div class="parrafo5" style="margin-bottom: 20px; margin-top: 20px; text-align:left;"> 
-        <img src="nippon-gakki-fenix-logo.jpg" class="logo1">
+        <img src="/static/img/nippon-gakki-fenix-logo.jpg" class="logo1">
         <div class="little_div_floating">
-            
+
     <p class="p1"> Ave Fenix de origen chino, el Hoo, un ave majestuosa símbolo de la buena suerte y las virtudes espirituales, porta un diapasón en su boca; ilustra la filosofía de su fundador hacia la máxima calidad, se utilizó como marca en los órganos.</p>
-            
+
     </div>
-    
+
     </div>
     <div class="parrafo6" style="margin-bottom: 20px; margin-top: 20px; text-align:left;"> 
-        <img src="imgres.png" class="logo1">
+        <img src="/static/img/imgres.png" class="logo1">
         <div class="little_div_floating">
             <p class="p1"><em>1927 Se crea la marca de los pianos de pared y de Yamaha Veneer</em></p>
-            
+
         </div>
-    
+
     </div>
     <div class="parrafo7" style="margin-bottom: 20px; margin-top: 20px; text-align:left;"> 
-        <img src="yamaha-piano-logo.png" class="logo1">
+        <img src="/static/img/yamaha-piano-logo.png" class="logo1">
         <div class="little_div_floating">
             <p class="p1"><em>1934 Diseño de uso habitual en anuncios en prensa y catálogos.</em></p>
             
@@ -93,7 +93,7 @@
     
     </div>
     <div class="parrafo8" style="margin-bottom: 20px; margin-top: 20px; text-align:left;"> 
-        <img src="Yamaha-Logo-old.png" class="logo1">
+        <img src="/static/img/Yamaha-Logo-old.png" class="logo1">
         <div class="little_div_floating">
             <p class="p1"><em>1937 Diseño de marca específico para los pianos de pared</em></p>
             
@@ -101,7 +101,7 @@
     </div>
     
     <div class="parrafo9" style="margin-bottom: 20px; margin-top: 20px; text-align:left;"> 
-        <img src="yamaha-mini.png" class="logo1">
+        <img src="/static/img/yamaha-mini.png" class="logo1">
         <div class="little_div_floating">
             <p class="p1"><em>1967 Se establece el logotipo de Yamaha</em></p> 
         </div>   
@@ -109,18 +109,18 @@
 
     <div class="webmapizq">
         <p style="color:white; font-family: 'Titillium Web', sans-serif; font-size: large" >Vehiculos</p>
-        <a href="motos.html" style="font-family: 'Titillium Web', sans-serif; font-weight: bold">Vehículos Sport</a><br>
+        <a href="{{ url_for('motos') }}" style="font-family: 'Titillium Web', sans-serif; font-weight: bold">Vehículos Sport</a><br>
 
     </div>
     <div class="webmapcen">
         <p style="color:white; font-family: 'Titillium Web', sans-serif; font-size: large; ">Soporte</p>
-        <a href="agencias.html" style="font-family: 'Titillium Web', sans-serif; font-weight: bold;">Encuentre su Agencia</a><br>
-        <a href="contacto.html" style="font-family: 'Titillium Web', sans-serif; font-weight: bold;">Contacto</a><br>
+        <a href="{{ url_for('agencias') }}" style="font-family: 'Titillium Web', sans-serif; font-weight: bold;">Encuentre su Agencia</a><br>
+        <a href="{{ url_for('contacto') }}" style="font-family: 'Titillium Web', sans-serif; font-weight: bold;">Contacto</a><br>
     </div>
     <div class="webmapder">
         <p style="color:white; font-family: 'Titillium Web', sans-serif; font-size: large" >Experimente Yamaha</p>
-        <a href="historia.html" style="font-family: 'Titillium Web', sans-serif; font-weight: bold">Historia</a><br>
-        <a href="index.html" style="font-family: 'Titillium Web', sans-serif; font-weight: bold">Volver al Inicio</a><br>
+        <a href="{{ url_for('historia') }}" style="font-family: 'Titillium Web', sans-serif; font-weight: bold">Historia</a><br>
+        <a href="{{ url_for('index') }}" style="font-family: 'Titillium Web', sans-serif; font-weight: bold">Volver al Inicio</a><br>
     </div><br>
     <div class="loadingbar"></div>
     <div class="footer">

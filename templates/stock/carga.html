@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carga de Stock Motos</title>
+    <link rel="stylesheet" href="/static/css/style1.css">
+    <link rel="stylesheet" href="/static/css/animate.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@1,200&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/static/img/favicon-16x16.png">
+    <script src="https://unpkg.com/vue@next"></script>
+</head>
+<body class="gridWebcontacto">
+
+
+    <div class="header">
+        <input type="checkbox" id="menu-check">
+        <label id="menu" for="menu-check">
+            <span id="menu-abrir">&#9776;</span>
+            <span id="menu-cerrar">X</span>
+        </label>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('index') }}" style="font-family: 'Titillium Web'; color: white; padding-right: 0.3em">Inicio</a></li>
+                <li><a href="{{ url_for('motos') }}" style="font-family: 'Titillium Web'; color: white; padding-right: 0.3em">Motos</a></li>
+                <li><a href="{{ url_for('historia') }}" style="font-family: 'Titillium Web'; color: white; padding-right: 0.3em">Historia</a></li>
+                <li><a href="{{ url_for('agencias') }}" style="font-family: 'Titillium Web'; color: white; padding-right: 0.3em">Agencias</a></li>
+                <li><a href="{{ url_for('contacto') }}" style="font-family: 'Titillium Web'; color: white; padding-right: 0.3em">Contacto</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="navbar">
+        <img src="/static/img/favicon-32x32.png" style="max-width: 1.8em; margin-left: 0.4em; margin-top: 0.3em;">
+        <span class="animate__animated animate__fadeIn" style="color:white; font-size: 1.3rem; font-family: 'Titillium Web', sans-serif;" >Yamaha - Revs your Heart®</span>
+    </div>
+    <div class="formulario">
+        <h2 style="font-family: 'Titillium Web'; color: rgb(56, 9, 226); padding-left: 0.8em; padding-top: 2%; text-align: center;">Carga de Inventario de Motos:</h2>
+        <form name="valida" id="form" action="/store" method="POST" enctype="multipart/form-data">
+            <table>
+                <tr>
+                    <td style="font-family: 'Titillium Web'; font-size: 1.1em; color: white;">ID:</td><br>
+                    <td><input type="text" name="id" id="id" placeholder="Dejar en blanco por favor..." size="30" maxlength="30"></td>
+                </tr>
+                <tr>
+                    <td style="font-family: 'Titillium Web'; font-size: 1.1em; color: white;">Modelo:</td><br>
+                    <td><input type="text" name="modelo" id="modelo" size="30" maxlength="30"></td>
+                </tr>
+                <tr>
+                    <td style="font-family: 'Titillium Web'; font-size: 1.1em; color: white;">Color:</td><br>
+                    <td><input type="text" name="color" id="color" size="30" maxlength="30"></td>
+                </tr>
+                <tr>
+                    <td style="font-family: 'Titillium Web'; font-size: 1.1em; color: white;">Motor: </td>
+                    <td><input type="text" name="motor" id="motor" size="30" maxlength="30"></td>
+                </tr>
+                <tr>
+                    <td style="font-family: 'Titillium Web'; font-size: 1.1em; color: white;" >Chasis:</td>
+                    <td><input type="text" name="chasis" id="chasis" size="30" maxlength="30"></td>
+                </tr>
+                <tr>
+                    <td style="font-family: 'Titillium Web'; font-size: 1.1em; color: white;" >Cilindrada:</td>
+                    <td><input type="text" name="cc" id="cc" size="30" maxlength="30"></td>
+                </tr>
+                <tr>
+                    <td style="font-family: 'Titillium Web'; font-size: 1.1em; color: white;" >Foto:</td>
+                    <td><input type="file" name="foto" id="foto"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="button" id="btnsend" value="Cargar" onclick="validarSend()" style="font-family: 'Titillium Web'; font-size: 1.1em; color: black; font-weight: bold; width: 7em; margin-inline: 101%; margin-top: 30%;"></input>
+                    </td>
+                </tr>
+            </table>
+            </form>
+
+            <script>
+                function validarSend() {
+
+                    if (document.valida.modelo.value.length <= 1) {
+                        alert("Escriba el modelo completo por favor...")
+                        document.valida.modelo.focus()
+                        return 0;
+                    }
+
+                    if (document.valida.color.value.length <= 2) {
+                        alert("Escriba el color completo por favor...")
+                        document.valida.color.focus()
+                        return 0;
+                    }
+
+                    if (document.valida.motor.value.length <= 2) {
+                        alert("Escriba número de motor completo por favor...")
+                        document.valida.motor.focus()
+                        return 0;
+                    }
+
+                    if (document.valida.chasis.value.length <= 2) {
+                        alert("Escriba número de chasis completo por favor...")
+                        document.valida.chasis.focus()
+                        return 0;
+                    }
+
+                    if (document.valida.cc.value.length <= 2) {
+                        alert("Escriba la cilindrada en número entero por favor...")
+                        document.valida.cc.focus()
+                        return 0;
+                    }
+
+                    alert('Gracias por completar la información solicitada'),
+                    document.valida.submit();
+                }
+
+            </script>
+
+    </div>
+    <div class="webmapizq">
+        <p style="color:white; font-family: 'Titillium Web', sans-serif; font-size: large" >Vehiculos</p>
+        <a href="{{ url_for('motos') }}" style="font-family: 'Titillium Web', sans-serif; font-weight: bold">Vehículos Sport</a><br>
+
+    </div>
+    <div class="webmapcen">
+        <p style="color:white; font-family: 'Titillium Web', sans-serif; font-size: large; ">Soporte</p>
+        <a href="{{ url_for('agencias') }}" style="font-family: 'Titillium Web', sans-serif; font-weight: bold;">Encuentre su Agencia</a><br>
+        <a href="{{ url_for('contacto') }}" style="font-family: 'Titillium Web', sans-serif; font-weight: bold;">Contacto</a><br>
+    </div>
+    <div class="webmapder">
+        <p style="color:white; font-family: 'Titillium Web', sans-serif; font-size: large" >Experimente Yamaha</p>
+        <a href="{{ url_for('historia') }}" style="font-family: 'Titillium Web', sans-serif; font-weight: bold">Historia</a><br>
+        <a href="{{ url_for('index') }}" style="font-family: 'Titillium Web', sans-serif; font-weight: bold">Volver al Inicio</a><br>
+    </div><br>
+    <div class="loadingbar"></div>
+    <div class="footer">
+        <p style="text-align: center; font-family: 'Titillium Web', sans-serif; font-size: 1em;">Yamaha Corporation<br>
+        2022 Todos los derechos reservados®</p>
+    </div>
+    <div class="loadingbar2"></div>
+
+</body>
+                    
+</html>

@@ -46,6 +46,35 @@ a:link:active, a:visited:active {
     align-content: center;
 }
 
+.gridWebedit {
+    display: grid;
+    grid-template: auto auto auto auto auto auto auto / 33% 33% 33%;
+    grid-template-areas: "header header header"
+    "navbar navbar navbar"
+    "formulario formulario formulario"
+    "webmapizq webmapcen webmapder"
+    "loadingbar loadingbar loadingbar"
+    "footer footer footer"
+    "loadingbar2 loadingbar2 loadingbar2";
+    align-content: center;
+}
+
+
+
+.gridWebinventario {
+    display: grid;
+    grid-template: auto auto auto auto auto auto auto / 33% 33% 33%;
+    grid-template-areas: "header header header"
+    "navbar navbar navbar"
+    "h1 h1 h1"
+    "table table table"
+    "webmapizq webmapcen webmapder"
+    "loadingbar loadingbar loadingbar"
+    "footer footer footer"
+    "loadingbar2 loadingbar2 loadingbar2";
+    align-content: center;
+}
+
 .gridWebmotos {
     display: grid;
     grid-template: auto auto auto auto auto auto auto auto auto auto auto / 33% 33% 33%;
@@ -98,6 +127,14 @@ a:link:active, a:visited:active {
     "footer footer footer"
     "loadingbar2 loadingbar2 loadingbar2";
     align-content: center;
+}
+
+.table {
+    grid-area: table;
+}
+
+.h1 {
+    grid-area: h1;
 }
 
 .header {grid-area: header; 

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yamaha Motors</title>
+    <link rel="stylesheet" href="/static/css/style1.css">
+    <link rel="stylesheet" href="/static/css/animate.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@1,200&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/static/img/favicon-16x16.png">
+    <script src="https://unpkg.com/vue@next"></script>
+</head>
+<body class="gridWeb">
+
+    <div class="header">
+        <input type="checkbox" id="menu-check">
+        <label id="menu" for="menu-check">
+            <span id="menu-abrir">&#9776;</span>
+            <span id="menu-cerrar">X</span>
+        </label>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('index') }}" style="font-family: 'Titillium Web'; color: white; padding-right: 0.3em">Inicio</a></li>
+                <li><a href="{{ url_for('motos') }}" style="font-family: 'Titillium Web'; color: white; padding-right: 0.3em">Motos</a></li>
+                <li><a href="{{ url_for('historia') }}" style="font-family: 'Titillium Web'; color: white; padding-right: 0.3em">Historia</a></li>
+                <li><a href="{{ url_for('agencias') }}" style="font-family: 'Titillium Web'; color: white; padding-right: 0.3em">Agencias</a></li>
+                <li><a href="{{ url_for('contacto') }}" style="font-family: 'Titillium Web'; color: white; padding-right: 0.3em">Contacto</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="navbar">
+        <img src="/static/img/favicon-32x32.png" style="max-width: 1.8em; margin-left: 0.4em; margin-top: 0.3em;">
+        <span class="animate__animated animate__fadeIn" style="color:white; font-size: 1.3rem; font-family: 'Titillium Web', sans-serif;" >Yamaha - Revs your Heart®</span>
+    </div>
+    <div class="mainfoto">
+        <ul>
+            <li><img src="/static/img/slider1.jpg" alt=""></li>
+            <li><img src="/static/img/slider2.jpg" alt=""></li>
+            <li><img src="/static/img/slider3.jpg" alt=""></li>
+            <li><img src="/static/img/slider4.jpg" alt=""></li>
+        </ul>
+    </div>
+    <div class="centeropt">
+        <p class="animate__animated animate__bounceInLeft" style="text-align:center; font-family: 'Titillium Web', sans-serif; color: white; font-size: 1.5em;">Descubra cual es su próxima Yamaha</p>
+    </div>
+    <div class="izqfoto">
+        <img src="/static/img/r7izq.jpg">
+    </div>
+    <div class="cenfoto">
+        <img src="/static/img/r7centro.jpg">
+    </div>
+    <div class="derfoto">
+        <img src="/static/img/r7derecha.jpg">
+    </div>
+    <div class="prefooterr3">
+        <p style="font-family: 'Titillium Web', sans-serif; font-size: large; font-weight:bold; color:rgb(47, 47, 205)">
+            R3
+        </p>
+    </div>
+    <div class="prefooterr7">
+        <p style="font-family: 'Titillium Web', sans-serif; font-size: large; font-weight:bold; color:rgb(47, 47, 205)">
+            R7
+        </p>
+    </div>
+    <div class="prefooterr1">
+        <p style="font-family: 'Titillium Web', sans-serif; font-size: large; font-weight:bold; color:rgb(47, 47, 205)">
+            R1
+        </p>
+    </div>
+    <div class="webmapizq">
+        <p style="color:white; font-family: 'Titillium Web', sans-serif; font-size: large" >Vehiculos</p>
+        <a href="{{ url_for('motos') }}" style="font-family: 'Titillium Web', sans-serif; font-weight: bold">Vehículos Sport</a><br>
+
+    </div>
+    <div class="webmapcen">
+        <p style="color:white; font-family: 'Titillium Web', sans-serif; font-size: large; ">Soporte</p>
+        <a href="{{ url_for('agencias') }}" style="font-family: 'Titillium Web', sans-serif; font-weight: bold;">Encuentre su Agencia</a><br>
+        <a href="{{ url_for('contacto') }}" style="font-family: 'Titillium Web', sans-serif; font-weight: bold;">Contacto</a><br>
+    </div>
+    <div class="webmapder">
+        <p style="color:white; font-family: 'Titillium Web', sans-serif; font-size: large" >Experimente Yamaha</p>
+        <a href="{{ url_for('historia') }}" style="font-family: 'Titillium Web', sans-serif; font-weight: bold">Historia</a><br>
+        <a href="{{ url_for('index') }}" style="font-family: 'Titillium Web', sans-serif; font-weight: bold">Volver al Inicio</a><br>
+    </div><br>
+    <div class="loadingbar"></div>
+    <div class="footer">
+        <p style="text-align: center; font-family: 'Titillium Web', sans-serif; font-size: 1em;">Yamaha Corporation<br>
+        2022 Todos los derechos reservados®</p>
+    </div>
+    <div class="loadingbar2"></div>
+
+</body>
+</html>
