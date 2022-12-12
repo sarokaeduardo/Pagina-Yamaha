@@ -32,6 +32,7 @@
                 <li><a href="{{ url_for('historia') }}" style="font-family: 'Titillium Web'; color: white; padding-right: 0.3em">Historia</a></li>
                 <li><a href="{{ url_for('agencias') }}" style="font-family: 'Titillium Web'; color: white; padding-right: 0.3em">Agencias</a></li>
                 <li><a href="{{ url_for('contacto') }}" style="font-family: 'Titillium Web'; color: white; padding-right: 0.3em">Contacto</a></li>
+                <li><a href="{{ url_for('inventario') }}" style="font-family: 'Titillium Web'; color: white; padding-right: 0.3em">Inventario</a></li>
             </ul>
         </nav>
     </div>
@@ -45,7 +46,7 @@
             <table>
                 <tr>
                     <td style="font-family: 'Titillium Web'; font-size: 1.1em; color: white;">ID:</td><br>
-                    <td><input type="text" name="id" id="id" placeholder="Dejar en blanco por favor..." size="30" maxlength="30"></td>
+                    <td><input type="text" name="id" id="id" placeholder="Dejar en blanco (Auto Completado)" size="30" maxlength="30"></td>
                 </tr>
                 <tr>
                     <td style="font-family: 'Titillium Web'; font-size: 1.1em; color: white;">Modelo:</td><br>
@@ -122,6 +123,7 @@
     <div class="webmapizq">
         <p style="color:white; font-family: 'Titillium Web', sans-serif; font-size: large" >Vehiculos</p>
         <a href="{{ url_for('motos') }}" style="font-family: 'Titillium Web', sans-serif; font-weight: bold">Vehículos Sport</a><br>
+        <a href="{{ url_for('inventario') }}" style="font-family: 'Titillium Web', sans-serif; font-weight: bold">Inventario</a><br>
 
     </div>
     <div class="webmapcen">
@@ -142,5 +144,5 @@
     <div class="loadingbar2"></div>
 
 </body>
-                    
+
 </html>

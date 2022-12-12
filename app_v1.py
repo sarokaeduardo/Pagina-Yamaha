@@ -112,6 +112,7 @@ def historia():
 @app.route('/contacto')
 def contacto():
     return render_template('stock/contacto.html')
+
 #--------------------------------------------------------------------
 # Función para eliminar un registro
 @app.route('/destroy/<int:id>')
